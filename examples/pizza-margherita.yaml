@@ -1,0 +1,8 @@
+apiVersion: app.corley.it/v1
+kind: Pizza
+metadata:
+  name: margherita
+spec:
+  name: "margherita"
+  ingredients: "Pomodoro, mozzarella, basilico, olio"
+  price: 6.5

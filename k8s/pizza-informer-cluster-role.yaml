@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: role-pizza-informer
+rules:
+- apiGroups:
+  - "app.corley.it"
+  resources:
+  - "pizzas"
+  verbs:
+  - "get"
+  - "list"
+  - "watch"
+
+

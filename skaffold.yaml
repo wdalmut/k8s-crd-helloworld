@@ -1,0 +1,15 @@
+apiVersion: skaffold/v1
+kind: Config
+metadata:
+  name: events
+build:
+  artifacts:
+  - image: wdalmut/pizza-informer
+    context: src/pizza-informer
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - ./k8s/namespace.yaml
+    - ./k8s/*
